@@ -1,0 +1,46 @@
+﻿<Page x:Class="Tretyakov_Gallery.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Tretyakov_Gallery"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="Третьяковкая галерея">
+    <Page.Background>
+        <ImageBrush ImageSource="Images/background.jpg"/>
+    </Page.Background>
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFF98484"/>
+            <Setter Property="FontFamily" Value="Bookman Old Style"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="22"/>       
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="105"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="490"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="270"/>
+        </Grid.ColumnDefinitions>
+        <Label Content=" Добро пожаловать в Государственную Третьяковскую галерею" FontFamily="Bookman Old Style" FontSize="24" Foreground="White" Grid.ColumnSpan="4" Grid.Row="1"/>
+        <Label Content="Коллекция представлена по категориям:" FontFamily="Bookman Old Style" FontSize="22" Grid.Column="1" Grid.Row="3"/>
+        <Button x:Name="portrait" Content="Портрет" ToolTip="Портрет — жанр изобразительного искусства, посвященный изображению человека или группы людей." Click="portrait_Click" Grid.Row="5"  Grid.Column="1" MouseEnter="portrait_MouseEnter"/>
+        <Button x:Name="view" Content="Пейзаж" ToolTip="Пейзаж — жанр посвящённый изображению какой-либо местности." Click="view_Click" Grid.Row="7" Grid.Column="1" MouseEnter="view_MouseEnter"/>
+        <Image Source="Images/Logo.jpg" Grid.Column="2" Grid.Row="3" Grid.RowSpan="6" Grid.ColumnSpan="2"/>
+        <Button x:Name="ticket" Content="Билеты онлайн" Foreground="#FFB90000" VerticalAlignment="Top" Grid.Column="1" Margin="10,10,261,0" Background="{x:Null}" BorderBrush="#FF5B0505" Click="ticket_Click"/>
+    </Grid>
+</Page>
